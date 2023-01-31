@@ -2,7 +2,7 @@
 title: "Roomlr - worldwide locator of holiday homes and apartments"
 start: "2013-03-08"
 end: "2014-11-15"
-image: "/img/projects/roomlr/roomlr.jpg"
+image: "/img/projects/roomlr/home.jpg"
 url: "https://www.roomlr.com/"
 technologies:
   - jQuery

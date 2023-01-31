@@ -9,7 +9,7 @@ export const siteTitle = "Frontend Developer's Portfolio";
 
 export default function Layout({ children, home }) {
   return (
-    <div className="container mx-auto px-4 py-10">
+    <div className="">
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -23,7 +23,7 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className="">
+     {/*  <header className="">
         {home ? (
           <>
             <div className="h1">{name}</div>
@@ -37,7 +37,7 @@ export default function Layout({ children, home }) {
             </div>
           </>
         )}
-      </header>
+      </header> */}
       {!home && (
         <div className="">
           <Link href="/">← Back to home</Link>
