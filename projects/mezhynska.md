@@ -1,5 +1,5 @@
 ---
-title: "Kristina Mezhynskaya – ukrainian singer's official site"
+title: "Kristina Mezhynskaya – ukrainian singer's official website"
 start: "2015-10-01"
 image: "/img/projects/mezhynska/home.jpg"
 url: "http://www.kristinamezhynskaya.com/"
