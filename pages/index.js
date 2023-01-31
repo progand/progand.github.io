@@ -5,6 +5,7 @@ import utilStyles from "../styles/utils.module.css";
 import { getSortedProjectsData } from "../lib/projects";
 import Link from "next/link";
 import Date from "../components/date";
+import Badge from "../components/badge";
 
 export async function getStaticProps() {
   const allProjectsData = getSortedProjectsData();
@@ -16,7 +17,6 @@ export async function getStaticProps() {
 }
 
 export default function Home({ allProjectsData }) {
-  console.log(allProjectsData);
   return (
     <Layout home>
       <Head>
@@ -49,7 +49,9 @@ export default function Home({ allProjectsData }) {
                 {technologies && (
                   <div>
                     {technologies.map((t) => (
-                      <small>{t}</small>
+                      <Badge className="mr-1" key={t}>
+                        {t}
+                      </Badge>
                     ))}
                   </div>
                 )}

@@ -20,16 +20,16 @@ images:
 
 I was lead frontend-developer on the project. I was responsible for frontend development.
 
-We developed Singe Page Application (SPA) first. It was based on Backbone/jQuery. SPA contained following pages:
+We developed *Singe Page Application* (SPA) first. It was based on **Backbone/jQuery**. SPA contained following pages:
 
 - homepage with search bar
 - list of apartments with complex filters
 - aparmtent details page with availability calendar
 - booking page
 
-Later we added server-side rendering on Python/Flask for SEO purposes. We used same Handlebars templates on both server and client.
+Later we added server-side rendering on **Python/Flask** for SEO purposes. We used same Handlebars templates on both server and client.
 
-We widely used Google Maps API on the project as well.
+We widely used **Google Maps API** on the project as well.
 
 #### About Roomlr
 

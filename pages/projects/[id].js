@@ -6,6 +6,7 @@ import Script from "next/script";
 import Layout from "../../components/layout";
 import { getAllProjectIds, getProjectData } from "../../lib/projects";
 import Date from "../../components/date";
+import Badge from "../../components/badge";
 
 export async function getStaticProps({ params }) {
   const projectData = await getProjectData(params.id);
@@ -36,8 +37,8 @@ export default function Project({ projectData }) {
         <title>{title}</title>
       </Head>
       <article>
-        <h1 className={utilStyles.headingXl}>{title}</h1>
-        <small className={utilStyles.lightText}>
+        <h1 className="">{title}</h1>
+        <small className="text-slate-400 text-sm">
           {start && <Date dateString={start} />}
           {start && end && " - "}
           {end && <Date dateString={end} />}
@@ -46,7 +47,9 @@ export default function Project({ projectData }) {
           <div>
             <h6>Tecnologies</h6>
             {technologies.map((t) => (
-              <small>{t}</small>
+              <Badge className="mr-1" key={t}>
+                {t}
+              </Badge>
             ))}
           </div>
         )}
