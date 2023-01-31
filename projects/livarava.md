@@ -6,6 +6,7 @@ image: "/img/projects/livarava/home.jpg"
 url: "https://www.livarava.com"
 technologies:
   - jQuery
+  - Ember.js
   - Bootstrap
 images:
   - "/img/projects/livarava/home.jpg"

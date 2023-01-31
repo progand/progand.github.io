@@ -1,4 +1,7 @@
 import utilStyles from "../../styles/utils.module.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 import Link from "next/link";
 import Image from "next/image";
 import Head from "next/head";
@@ -32,6 +35,16 @@ export default function Project({ projectData }) {
     : image
     ? [image]
     : null;
+  // https://react-slick.neostack.com/docs/api/
+  const sliderSettings = {
+    dots: true,
+    fade: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    adaptiveHeight: true,
+  };
   return (
     <Layout>
       <Head>
@@ -57,17 +70,19 @@ export default function Project({ projectData }) {
             </div>
           </div>
         </div>
-        <div className="relative z-0 max-w-screen-lg mx-auto overflow-hidden lg:rounded-lg aspect-video">
-          {images &&
-            images.map((image, imageIndex) => (
-              <Image
-                key={imageIndex}
-                src={image}
-                fill
-                objectFit="cover"
-                alt=""
-              />
-            ))}
+        <div className="max-w-screen-lg mx-auto lg:rounded-lg">
+          <Slider {...sliderSettings}>
+            {images &&
+              images.map((image, imageIndex) => (
+                <Image
+                  key={imageIndex}
+                  src={image}
+                  width={1024}
+                  height={768}
+                  alt=""
+                />
+              ))}
+          </Slider>
         </div>
         <div className="container px-8 mx-auto xl:px-5  max-w-screen-lg py-5 lg:py-8">
           <article
