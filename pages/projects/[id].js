@@ -56,7 +56,7 @@ export default function Project({ projectData }) {
             <div className="flex justify-center">
               <Technologies technologies={technologies} />
             </div>
-            <h1 class="mt-2 mb-3 text-3xl font-semibold tracking-tight text-center lg:leading-snug text-brand-primary lg:text-4xl dark:text-white">
+            <h1 className="mt-2 mb-3 text-3xl font-semibold tracking-tight text-center lg:leading-snug text-brand-primary lg:text-4xl dark:text-white">
               {title}
             </h1>
             <div className="flex justify-center items-center mt-3 space-x-3 text-gray-500 dark:text-gray-400">
