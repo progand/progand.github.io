@@ -75,6 +75,7 @@ export default function Project({ projectData }) {
             {images &&
               images.map((image, imageIndex) => (
                 <Image
+                  priority={!imageIndex}
                   key={imageIndex}
                   src={image}
                   width={1024}

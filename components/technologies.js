@@ -13,7 +13,7 @@ export default function Technologies({ technologies }) {
         technologies.map((t, index) => (
           <a
             href={"/technologies/" + encodeURIComponent(t)}
-            key="index"
+            key={index}
             className="hover:opacity-60"
           >
             <span

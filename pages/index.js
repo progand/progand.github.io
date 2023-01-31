@@ -38,7 +38,6 @@ export default function Home({ allProjectsData }) {
                       src={image}
                       alt=""
                       fill
-                      objectFit="cover"
                       className="transition-all object-cover"
                     />
                   </Link>

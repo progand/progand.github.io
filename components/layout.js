@@ -3,6 +3,8 @@ import Image from "next/image";
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
+import Header from "./header";
+import Footer from "./footer";
 
 const name = "progand";
 export const siteTitle = "Frontend Developer's Portfolio";
@@ -23,7 +25,7 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-     {/*  <header className="">
+      {/*  <header className="">
         {home ? (
           <>
             <div className="h1">{name}</div>
@@ -38,12 +40,14 @@ export default function Layout({ children, home }) {
           </>
         )}
       </header> */}
+      <Header />
       {!home && (
         <div className="">
           <Link href="/">← Back to home</Link>
         </div>
       )}
       <main>{children}</main>
+      <Footer />
     </div>
   );
 }
