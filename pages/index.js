@@ -33,19 +33,29 @@ export default function Home({ allProjectsData }) {
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
-          {allProjectsData.map(({ id, date, title, image, technologies }) => (
-            <li className={utilStyles.listItem} key={id}>
-              {!!image && (
-                <Image priority src={image} height={200} width={200} alt="" />
-              )}
-              <Link href={`/projects/${id}`}>{title}</Link>
-              <br />
-              <small className={utilStyles.lightText}>
-                <Date dateString={date} />
-              </small>
-              {technologies}
-            </li>
-          ))}
+          {allProjectsData.map(
+            ({ id, start, end, title, image, technologies }) => (
+              <li className={utilStyles.listItem} key={id}>
+                {!!image && (
+                  <Image priority src={image} height={200} width={200} alt="" />
+                )}
+                <Link href={`/projects/${id}`}>{title}</Link>
+                <br />
+                <small className={utilStyles.lightText}>
+                  {start && <Date dateString={start} />}
+                  {start && end && " - "}
+                  {end && <Date dateString={end} />}
+                </small>
+                {technologies && (
+                  <div>
+                    {technologies.map((t) => (
+                      <small>{t}</small>
+                    ))}
+                  </div>
+                )}
+              </li>
+            )
+          )}
         </ul>
       </section>
     </Layout>

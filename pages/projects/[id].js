@@ -24,17 +24,41 @@ export async function getStaticPaths() {
 }
 
 export default function Project({ projectData }) {
+  const { start, end, title, image, technologies, contentHtml } = projectData;
+  const images = projectData.images
+    ? projectData.images
+    : image
+    ? [image]
+    : null;
   return (
     <Layout>
       <Head>
-        <title>{projectData.title}</title>
+        <title>{title}</title>
       </Head>
       <article>
-        <h1 className={utilStyles.headingXl}>{projectData.title}</h1>
-        <div className={utilStyles.lightText}>
-          <Date dateString={projectData.date} />
-        </div>
-        <div dangerouslySetInnerHTML={{ __html: projectData.contentHtml }} />
+        <h1 className={utilStyles.headingXl}>{title}</h1>
+        <small className={utilStyles.lightText}>
+          {start && <Date dateString={start} />}
+          {start && end && " - "}
+          {end && <Date dateString={end} />}
+        </small>
+        {technologies && (
+          <div>
+            <h6>Tecnologies</h6>
+            {technologies.map((t) => (
+              <small>{t}</small>
+            ))}
+          </div>
+        )}
+        {images && (
+          <div>
+            <h6>Images</h6>
+            {images.map((image) => (
+              <Image src={image} height={400} width={400} alt="" />
+            ))}
+          </div>
+        )}
+        <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
       </article>
     </Layout>
   );
