@@ -18,6 +18,7 @@ images:
 #### My Role
 
 I was the only developer on the project.
+I developed **Wordpress** theme, added contact form.
 
 #### About Project
 

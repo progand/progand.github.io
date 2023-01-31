@@ -18,6 +18,7 @@ images:
 #### My Role
 
 I was lead developer on the project for some time.
+I've changed **Wordpress** theme, modified categories, added custom fields and post types, added map and events calendar.
 
 #### About Project
 
