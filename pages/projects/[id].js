@@ -1,11 +1,14 @@
-import utilStyles from "../../styles/utils.module.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
-import Link from "next/link";
+import { useState } from "react";
 import Image from "next/image";
 import Head from "next/head";
-import Script from "next/script";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+// import optional lightbox plugins
+import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
+import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
+import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
+import "yet-another-react-lightbox/plugins/thumbnails.css";
 import Layout from "../../components/layout";
 import { getAllProjectIds, getProjectData } from "../../lib/projects";
 import Date from "../../components/date";
@@ -29,22 +32,14 @@ export async function getStaticPaths() {
 }
 
 export default function Project({ projectData }) {
+  const [index, setIndex] = useState(-1);
   const { start, end, title, image, technologies, contentHtml } = projectData;
   const images = projectData.images
     ? projectData.images
     : image
     ? [image]
     : null;
-  // https://react-slick.neostack.com/docs/api/
-  const sliderSettings = {
-    dots: true,
-    fade: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    adaptiveHeight: true,
-  };
+  const photos = images.map((src) => ({ src, width: 1905, height: 912 }));
   return (
     <Layout>
       <Head>
@@ -70,30 +65,59 @@ export default function Project({ projectData }) {
             </div>
           </div>
         </div>
-        <div className="max-w-screen-lg mx-auto lg:rounded-lg">
-          <Slider {...sliderSettings}>
+        <div className="container px-8 mx-auto xl:px-5 max-w-screen-lg py-5 lg:py-8">
+          <div className={"grid gap-10 md:grid-cols-2 "}>
             {images &&
-              images.map((image, imageIndex) => (
-                <Image
-                  priority={!imageIndex}
+              images.slice(0, 4).map((image, imageIndex) => (
+                <div
                   key={imageIndex}
-                  src={image}
-                  width={1024}
-                  height={768}
-                  alt=""
-                />
+                  className="h-80 relative cursor-pointer overflow-hidden p-10 transition-all hover:scale-105 rounded-md shadow-md border"
+                  tabIndex={-1}
+                  onClick={() => setIndex(imageIndex)}
+                  title="Click to Open"
+                >
+                  <Image
+                    priority={!imageIndex}
+                    src={image}
+                    fill
+                    alt=""
+                    className=" object-cover"
+                  />
+                </div>
               ))}
-          </Slider>
+          </div>
+        </div>
+        <div className="flex justify-center mt-7 mb-7">
+          <a
+            className="px-5 py-2 text-sm text-blue-600 rounded-full dark:text-blue-500 bg-brand-secondary/20 "
+            href="!#"
+            onClick={(evt) => {
+              evt.preventDefault();
+              setIndex(0);
+            }}
+          >
+            View all images
+          </a>
         </div>
         <div className="container px-8 mx-auto xl:px-5  max-w-screen-lg py-5 lg:py-8">
           <article className="max-w-screen-md mx-auto">
             <div
-              class="my-3 prose prose-base dark:prose-invert"
+              className="my-3 prose prose-base dark:prose-invert"
               dangerouslySetInnerHTML={{ __html: contentHtml }}
             />
           </article>
         </div>
       </div>
+      {images && (
+        <Lightbox
+          slides={photos}
+          open={index >= 0}
+          index={index}
+          close={() => setIndex(-1)}
+          // enable optional lightbox plugins
+          plugins={[Fullscreen, Slideshow, Thumbnails, Zoom]}
+        />
+      )}
     </Layout>
   );
 }
