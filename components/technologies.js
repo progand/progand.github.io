@@ -1,4 +1,10 @@
-export default function Technologies({ technologies, className = "" }) {
+import Link from "next/link";
+
+export default function Technologies({
+  children,
+  technologies,
+  className = "",
+}) {
   const colors = [
     "text-blue-600",
     "text-purple-600",
@@ -11,8 +17,8 @@ export default function Technologies({ technologies, className = "" }) {
     <div className={className}>
       {technologies &&
         technologies.map((t, index) => (
-          <a
-            href={"/technologies/" + encodeURIComponent(t)}
+          <Link
+            href={`/technologies/${encodeURIComponent(t)}`}
             key={index}
             className="hover:opacity-60"
           >
@@ -24,8 +30,9 @@ export default function Technologies({ technologies, className = "" }) {
             >
               {t}
             </span>
-          </a>
+          </Link>
         ))}
+      {children}
     </div>
   );
 }
