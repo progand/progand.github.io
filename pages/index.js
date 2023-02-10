@@ -3,6 +3,10 @@ import Image from "next/image";
 import Layout, { siteTitle } from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
 import { getSortedProjectsData } from "../lib/projects";
+import {
+  getFeaturedTechnologies,
+  getAllTechnologiesFromProjectsData,
+} from "../lib/technologies";
 import Link from "next/link";
 import Date from "../components/date";
 import Badge from "../components/badge";
@@ -18,6 +22,8 @@ export async function getStaticProps() {
 }
 
 export default function Home({ allProjectsData }) {
+  const allTechnologies = getAllTechnologiesFromProjectsData(allProjectsData);
+  const featuredTechnologies = getFeaturedTechnologies();
   return (
     <Layout home>
       <Head>
@@ -25,6 +31,12 @@ export default function Home({ allProjectsData }) {
       </Head>
 
       <div className="container px-8 mx-auto xl:px-5  max-w-screen-lg py-5 lg:py-8">
+        <div className="flex justify-center flex-wrap mb-12">
+          <Technologies
+            technologies={featuredTechnologies}
+            className="flex gap-3"
+          />
+        </div>
         <div className={"grid gap-10 lg:gap-10 md:grid-cols-2 "}>
           {allProjectsData
             .filter(({ featured }) => featured)
@@ -48,7 +60,10 @@ export default function Home({ allProjectsData }) {
                     </Link>
                   </div>
                   <div>
-                    <Technologies technologies={technologies.slice(0, 3)} />
+                    <Technologies
+                      technologies={technologies.slice(0, 3)}
+                      className="flex gap-3"
+                    />
                     <div className="text-lg font-semibold leading-snug tracking-tight mt-2 dark:text-white">
                       <Link
                         href={`/projects/${id}`}

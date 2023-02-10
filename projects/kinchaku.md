@@ -7,7 +7,7 @@ url: "https://app.kinchaku.com/"
 technologies:
   - Vue
   - Vuetify
-  - Javascript
+  - JavaScript
 images:
   - "/img/projects/2019/Kinchaku2019/kinchaku-home.png"
   - "/img/projects/2019/Kinchaku2019/kinchaku-login.png"

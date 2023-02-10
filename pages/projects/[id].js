@@ -49,7 +49,10 @@ export default function Project({ projectData }) {
         <div className="container px-8 mx-auto xl:px-5  max-w-screen-lg py-5 lg:py-8 !pt-0">
           <div className="max-w-screen-md mx-auto ">
             <div className="flex justify-center">
-              <Technologies technologies={technologies} />
+              <Technologies
+                technologies={technologies}
+                className="flex gap-3"
+              />
             </div>
             <h1 className="mt-2 mb-3 text-3xl font-semibold tracking-tight text-center lg:leading-snug text-brand-primary lg:text-4xl dark:text-white">
               {title}

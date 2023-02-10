@@ -1,4 +1,4 @@
-export default function Technologies({ technologies }) {
+export default function Technologies({ technologies, className = "" }) {
   const colors = [
     "text-blue-600",
     "text-purple-600",
@@ -8,7 +8,7 @@ export default function Technologies({ technologies }) {
     "text-rose-600",
   ];
   return (
-    <div className="flex gap-3">
+    <div className={className}>
       {technologies &&
         technologies.map((t, index) => (
           <a
