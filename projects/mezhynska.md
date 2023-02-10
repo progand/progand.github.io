@@ -15,11 +15,11 @@ images:
   - "/img/projects/mezhynska/contacts.jpg"
 ---
 
-#### My Role
+## My Role
 
 I was the only developer on the project.
 I developed **Wordpress** theme, added contact form.
 
-#### About Project
+## About Project
 
 Portfolio of beautiful ukrainian singer Kristina Mezhynskaya.

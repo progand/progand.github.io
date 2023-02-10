@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-  h1 {
+  /* h1 {
     @apply text-4xl font-semibold my-8;
   }
   h2 {
@@ -29,12 +29,12 @@
   }
   ol {
     @apply list-decimal list-inside mb-3;
-  }
+  } */
   a {
     @apply underline text-slate-400;
   }
   a:hover {
-    @apply text-sky-400;
+    @apply text-sky-400 opacity-90;
   }
 }
 

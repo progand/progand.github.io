@@ -16,7 +16,7 @@ images:
   - "/img/projects/roomlr/apartment.jpg"
 ---
 
-#### My Role
+## My Role
 
 I was lead frontend-developer on the project. I was responsible for frontend development.
 
@@ -31,7 +31,7 @@ Later we added server-side rendering on **Python/Flask** for SEO purposes. We us
 
 We widely used **Google Maps API** on the project as well.
 
-#### About Roomlr
+## About Roomlr
 
 Roomlr is a worldwide search engine for every type of holiday home or apartment.
 Whatever you may wish to rent – chalet, houseboat, apartment or entire house – you'll find it here.
@@ -39,6 +39,6 @@ With its database of 1.4 million locations, Roomlr offers a new and fast, easy a
 
 Mission: present the most extensive range worldwide, combined with a powerful search engine. Having found a location, clients can book via the partner’s website. Roomlr offers a complete overview for every house: location, most competitive price, availability, quality photos, descriptions, ratings, detailed maps and every possible amenity. Roomlr is easy to use and optimised for desktop, smartphone and tablet.
 
-#### Publications
+## Publications
 
 - [SanomaVentures invests in Roomlr, the search engine for holiday homes](https://roomlr.pr.co/71015-sanomaventures-invests-in-roomlr-the-search-engine-for-holiday-homes)

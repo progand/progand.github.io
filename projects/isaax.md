@@ -15,7 +15,7 @@ images:
   - "/img/projects/2016/Isaax2016-2017/isaax-home.png"
 ---
 
-#### My Role
+## My Role
 
 I have build landing pages, user frontend and admin panel for this web-service.
 
@@ -23,6 +23,6 @@ Features: realtime charts, social login, internationalization, 3rd party api int
 
 Technologies: react, redux, websockets, redux-forms, highcharts, phenomic.io, zendesk.
 
-#### About Project
+## About Project
 
 Isaax is IOT platform. Isaax allows you to get your code from repository to device without any of the hassle.

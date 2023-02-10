@@ -15,12 +15,12 @@ images:
   - "/img/projects/prostir/calendar.jpg"
 ---
 
-#### My Role
+## My Role
 
 I was lead developer on the project for some time.
 I've changed **Wordpress** theme, modified categories, added custom fields and post types, added map and events calendar.
 
-#### About Project
+## About Project
 
 Projects of IAC "Civic Space" are reliable information channels for Ukrainian stakeholders.
 

@@ -20,7 +20,7 @@ images:
   - "/img/projects/2021/Hospodari2021/analytics.png"
 ---
 
-#### My Role
+## My Role
 
 I was lead frontend-developer on the project. I was responsible for website and admin panel development.
 
@@ -47,6 +47,6 @@ Some of tasks I made:
 - added image uploading and portfolio creation for users
 - finished a lot of layout changes and bugfixes
 
-#### About Project
+## About Project
 
 Project is aimed to handle all issues any building/flat/house faces including constructuions, repairments, replacements, cleaning, etc.

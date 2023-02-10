@@ -86,10 +86,12 @@ export default function Project({ projectData }) {
           </Slider>
         </div>
         <div className="container px-8 mx-auto xl:px-5  max-w-screen-lg py-5 lg:py-8">
-          <article
-            className="max-w-screen-md mx-auto"
-            dangerouslySetInnerHTML={{ __html: contentHtml }}
-          />
+          <article className="max-w-screen-md mx-auto">
+            <div
+              class="my-3 prose prose-base dark:prose-invert"
+              dangerouslySetInnerHTML={{ __html: contentHtml }}
+            />
+          </article>
         </div>
       </div>
     </Layout>

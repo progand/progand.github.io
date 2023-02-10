@@ -14,7 +14,7 @@ images:
   - "/img/projects/2019/Kinchaku2019/kinchaku-business-details.png"
 ---
 
-#### My Role
+## My Role
 
 I was responsible for frontend development.
 My most complex tasks:
@@ -29,7 +29,7 @@ Chart were made with Echarts.js
 Visual web-page builder we made similar to Shopify using predefined templates and compotents.
 Embeddable widget was developed on vanilla JS.
 
-#### About Project
+## About Project
 
 KINCHAKU is a cloud service that supports customer management and operational efficiency using digital cards.
 KINCHAKU will improve the complicated work done with paper and plastic.

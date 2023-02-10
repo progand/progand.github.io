@@ -14,10 +14,10 @@ images:
   - "/img/projects/livarava/feed.jpg"
 ---
 
-#### My Role
+## My Role
 
 I was lead frontend-developer on the project. I was responsible for frontend development.
 
-#### About Project
+## About Project
 
 Online service that helps systematize and organize information (text, images, audio, video, etc..), share with your friends.
