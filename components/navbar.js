@@ -60,7 +60,7 @@ export default function Navbar() {
                       src="/img/logo.svg"
                       alt="logo"
                       width={112}
-                      height={70}
+                      height={40}
                     />
                   </Link>
                   <Link href="/" className="hidden w-28 dark:block">
