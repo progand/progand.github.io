@@ -14,15 +14,19 @@ export default function Navbar() {
       label: "Portfolio",
       href: "/projects",
     },
-    /*
     {
       label: "Skills",
-      href: "/skills",
+      href: "/technologies",
       external: true,
-    },*/
+    },
   ];
 
   const rightmenu = [
+    {
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/andriilach/",
+      external: true,
+    },
     {
       label: "Github",
       href: "https://github.com/progand",
