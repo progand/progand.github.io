@@ -14,6 +14,7 @@ images:
   - "/img/projects/roomlr/home.jpg"
   - "/img/projects/roomlr/list.jpg"
   - "/img/projects/roomlr/apartment.jpg"
+featured: true
 ---
 
 ## My Role

@@ -65,40 +65,43 @@ export default function Project({ projectData }) {
             </div>
           </div>
         </div>
-        <div className="container px-8 mx-auto xl:px-5 max-w-screen-lg py-5 lg:py-8">
-          <div className={"grid gap-10 md:grid-cols-2 "}>
-            {images &&
-              images.slice(0, 4).map((image, imageIndex) => (
-                <div
-                  key={imageIndex}
-                  className="h-80 relative cursor-pointer overflow-hidden p-10 transition-all hover:scale-105 rounded-md shadow-md border"
-                  tabIndex={-1}
-                  onClick={() => setIndex(imageIndex)}
-                  title="Click to Open"
-                >
-                  <Image
-                    priority={!imageIndex}
-                    src={image}
-                    fill
-                    alt=""
-                    className=" object-cover"
-                  />
-                </div>
-              ))}
-          </div>
-        </div>
-        <div className="flex justify-center mt-7 mb-7">
-          <a
-            className="px-5 py-2 text-sm text-blue-600 rounded-full dark:text-blue-500 bg-brand-secondary/20 "
-            href="!#"
-            onClick={(evt) => {
-              evt.preventDefault();
-              setIndex(0);
-            }}
-          >
-            View all images
-          </a>
-        </div>
+        {images && (
+          <>
+            <div className="container px-8 mx-auto xl:px-5 max-w-screen-lg py-5 lg:py-8">
+              <div className={"grid gap-10 md:grid-cols-2 "}>
+                {images.slice(0, 4).map((image, imageIndex) => (
+                  <div
+                    key={imageIndex}
+                    className="h-80 relative cursor-pointer overflow-hidden p-10 transition-all hover:scale-105 rounded-md shadow-md border"
+                    tabIndex={-1}
+                    onClick={() => setIndex(imageIndex)}
+                    title="Click to Open"
+                  >
+                    <Image
+                      priority={!imageIndex}
+                      src={image}
+                      fill
+                      alt=""
+                      className=" object-cover"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="flex justify-center mt-7 mb-7">
+              <a
+                className="px-5 py-2 text-sm text-blue-600 rounded-full dark:text-blue-500 bg-brand-secondary/20 "
+                href="!#"
+                onClick={(evt) => {
+                  evt.preventDefault();
+                  setIndex(0);
+                }}
+              >
+                View all images ({images.length})
+              </a>
+            </div>
+          </>
+        )}
         <div className="container px-8 mx-auto xl:px-5  max-w-screen-lg py-5 lg:py-8">
           <article className="max-w-screen-md mx-auto">
             <div

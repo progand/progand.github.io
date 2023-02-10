@@ -13,6 +13,7 @@ technologies:
   - Github API
 images:
   - "/img/projects/2016/Isaax2016-2017/isaax-home.png"
+featured: true
 ---
 
 ## My Role

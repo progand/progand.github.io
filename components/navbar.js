@@ -10,10 +10,11 @@ export default function Navbar() {
       label: "Home",
       href: "/",
     },
-    /*  {
+    {
       label: "Portfolio",
-      href: "/archive",
+      href: "/projects",
     },
+    /*
     {
       label: "Skills",
       href: "/skills",

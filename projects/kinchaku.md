@@ -12,6 +12,7 @@ images:
   - "/img/projects/2019/Kinchaku2019/kinchaku-home.png"
   - "/img/projects/2019/Kinchaku2019/kinchaku-login.png"
   - "/img/projects/2019/Kinchaku2019/kinchaku-business-details.png"
+featured: true
 ---
 
 ## My Role
