@@ -45,7 +45,9 @@ export default function Home({ allProjectsData }) {
             </Link>
           </Technologies>
         </div>
-        <ProjectsList projects={allProjectsData} />
+        <ProjectsList
+          projects={allProjectsData.filter(({ featured }) => featured)}
+        />
         <div className="flex justify-center mt-7 mb-7">
           <Link
             href={`/projects`}

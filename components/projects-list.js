@@ -6,9 +6,8 @@ import Technologies from "./technologies";
 export default function ProjectsList({ projects }) {
   return (
     <div className={"grid gap-10 lg:gap-10 md:grid-cols-2 "}>
-      {projects
-        .filter(({ featured }) => featured)
-        .map(({ id, start, end, title, image, technologies }, projectIndex) => (
+      {projects.map(
+        ({ id, start, end, title, image, technologies }, projectIndex) => (
           <div className="cursor-pointer group" key={projectIndex}>
             <div className="overflow-hidden transition-all bg-gray-100 rounded-md dark:bg-gray-800 hover:scale-105">
               <Link
@@ -50,7 +49,8 @@ export default function ProjectsList({ projects }) {
               </div>
             </div>
           </div>
-        ))}
+        )
+      )}
     </div>
   );
 }
