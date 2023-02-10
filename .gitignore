@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+stablo-1.0.0/
 
 # testing
 /coverage
