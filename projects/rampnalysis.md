@@ -15,7 +15,10 @@ images:
   - "/img/projects/2022/Rampnalysis2022/News-Rampnalysis.png"
   - "/img/projects/2022/Rampnalysis2022/All-crypto.png"
   - "/img/projects/2022/Rampnalysis2022/Notifications-Rampnalysis.png"
+video: "https://youtu.be/g7Uec4ZRsQ8"
 ---
+
+[Video demonstration](https://youtu.be/g7Uec4ZRsQ8)
 
 ## My Role
 
@@ -43,7 +46,7 @@ Technologies: **React**, **Bootstrap 4**, **Google Maps API**.
 
 ## About Project
 
-Rampnalysis is a crypto exchange platform where user can compare providers rates and select the best possible price. _Provider_ is a website where user can buy/sell crypto coins. Rampnalysis didn't have payment integration when I worked on it. Platform redirect to provider's website for actual crypto processing. -
+Rampnalysis is a crypto exchange platform where user can compare providers rates and select the best possible price. _Provider_ is a website where user can buy/sell crypto coins. Rampnalysis didn't have payment integration when I worked on it. Platform redirect to provider's website for actual crypto processing.
 
 Rampnalysis provides integration with a number of providers (websites):
 
