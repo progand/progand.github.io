@@ -19,7 +19,7 @@ export default function ProjectsList({ projects }) {
                   alt=""
                   fill
                   priority={!projectIndex}
-                  className="transition-all object-cover"
+                  className="md:saturate-50 md:brightness-95 object-cover hover:filter-none"
                 />
               </Link>
             </div>

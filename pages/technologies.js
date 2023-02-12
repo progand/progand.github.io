@@ -25,28 +25,30 @@ export default function Home({ allProjectsData }) {
       </Head>
 
       <div className="container px-8 mx-auto xl:px-5  max-w-screen-lg py-5 lg:py-8">
-        <div className={"grid gap-8 lg:gap-10 sm:grid-cols-2 md:grid-cols-3"}>
+        <div
+          className={
+            "divide-y grid gap-x-20 lg:gap-x-30 sm:grid-cols-2 md:grid-cols-3"
+          }
+        >
           {Object.keys(allStats).map((technology, technologyIndex) => (
             <div
-              className="cursor-pointer group border p-4 rounded"
               key={technologyIndex}
+              className="text-lg leading-snug tracking-tight dark:text-white p-3"
             >
-              <div className="text-lg font-semibold leading-snug tracking-tight dark:text-white ">
-                <Link
-                  href={`/technologies/${technology}`}
-                  className="no-underline text-inherit flex justify-center items-center"
+              <Link
+                href={`/technologies/${technology}`}
+                className="no-underline text-inherit flex items-center justify-between"
+              >
+                <span className="bg-gradient-to-r from-green-200 to-green-100 dark:from-purple-800 dark:to-purple-900 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]">
+                  {technology}
+                </span>
+                <span
+                  className="ml-2 text-blue-600 dark:text-blue-300 text-sm inline-block px-2 border rounded-xl"
+                  title={`${allStats[technology]} projects`}
                 >
-                  <span className="bg-gradient-to-r from-green-200 to-green-100 dark:from-purple-800 dark:to-purple-900 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]">
-                    {technology}
-                  </span>
-                  <span
-                    className="ml-2 font-medium text-blue-600 text-sm inline-block px-2 border rounded-xl"
-                    title={`${allStats[technology]} projects`}
-                  >
-                    {allStats[technology]}
-                  </span>
-                </Link>
-              </div>
+                  {allStats[technology]}
+                </span>
+              </Link>
             </div>
           ))}
         </div>
