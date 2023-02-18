@@ -33,7 +33,8 @@ export async function getStaticPaths() {
 
 export default function Project({ projectData }) {
   const [index, setIndex] = useState(-1);
-  const { start, end, title, image, technologies, contentHtml } = projectData;
+  const { start, end, title, image, technologies, contentHtml, hidden } =
+    projectData;
   const images = projectData.images
     ? projectData.images
     : image
@@ -66,6 +67,13 @@ export default function Project({ projectData }) {
               )}
               {end && <Date className="text-sm" dateString={end} />}
             </div>
+            {!!hidden && (
+              <div className="flex justify-center mt-3">
+                <span className="text-sm text-orange-50 bg-orange-600  dark:text-orange:300 dark:bg-orange-700 rounded inline-block px-2 ">
+                  hidden
+                </span>
+              </div>
+            )}
           </div>
         </div>
         {images && (

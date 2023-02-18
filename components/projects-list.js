@@ -4,9 +4,11 @@ import Date from "./date";
 import Technologies from "./technologies";
 
 export default function ProjectsList({ projects }) {
+  const publicProjects = projects.filter(({ hidden }) => !hidden);
+  const hiddenProjects = projects.filter(({ hidden }) => hidden);
   return (
     <div className={"grid gap-10 lg:gap-10 md:grid-cols-2 "}>
-      {projects.map(
+      {publicProjects.map(
         ({ id, start, end, title, image, technologies }, projectIndex) => (
           <div className="cursor-pointer group" key={projectIndex}>
             <div className="overflow-hidden transition-all bg-gray-100 rounded-md dark:bg-gray-800 hover:scale-105">
@@ -50,6 +52,22 @@ export default function ProjectsList({ projects }) {
             </div>
           </div>
         )
+      )}
+      {hiddenProjects && hiddenProjects.length ? (
+        <div className="cursor-pointer group">
+          <div className="overflow-hidden transition-all bg-gray-100 rounded-md dark:bg-gray-800 hover:scale-105">
+            <div className="relative block aspect-video">
+              <div className="flex flex-col justify-center items-center h-full">
+                <div className="text-3xl text-slate-500 dark:text-white">
+                  +{hiddenProjects.length}
+                </div>
+                <div className="text-lg text-slate-500 dark:text-gray-400">hidden projects</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      ) : (
+        ""
       )}
     </div>
   );

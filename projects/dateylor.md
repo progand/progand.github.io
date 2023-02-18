@@ -20,7 +20,7 @@ images:
   - "/img/projects/2022/Dateylor2022/dateylor-catalog.png"
   - "/img/projects/2022/Dateylor2022/dateylor-details.png"
   - "/img/projects/2022/Dateylor2022/dateylor-orders.png"
-featured: true
+hidden: true
 ---
 
 ## My Role
