@@ -18,7 +18,7 @@ images:
 video: "https://youtu.be/g7Uec4ZRsQ8"
 ---
 
-[Video demonstration](https://youtu.be/g7Uec4ZRsQ8)
+[Demo Video](https://youtu.be/g7Uec4ZRsQ8)
 
 ## My Role
 

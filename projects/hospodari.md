@@ -19,7 +19,10 @@ images:
   - "/img/projects/2021/Hospodari2021/upload-image.png"
   - "/img/projects/2021/Hospodari2021/analytics.png"
 featured : true
+video: 'https://youtu.be/DzLwIgSRDUg'
 ---
+
+[Demo Video](https://youtu.be/DzLwIgSRDUg)
 
 ## My Role
 

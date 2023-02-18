@@ -21,7 +21,11 @@ images:
   - "/img/projects/2022/Dateylor2022/dateylor-details.png"
   - "/img/projects/2022/Dateylor2022/dateylor-orders.png"
 hidden: true
+video: 'https://youtu.be/nT01mnRxQOY'
 ---
+
+[Demo Video](https://youtu.be/nT01mnRxQOY)
+[Demo Video #2](https://youtu.be/4mMT8HyyUSo)
 
 ## My Role
 
