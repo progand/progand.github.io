@@ -31,7 +31,6 @@ export default function Home({ allProjectsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-
       <div className="container px-8 mx-auto xl:px-5  max-w-screen-lg py-5 lg:py-8">
         <div className="flex justify-center flex-wrap mb-12">
           <Technologies
@@ -45,17 +44,14 @@ export default function Home({ allProjectsData }) {
             </Link>
           </Technologies>
         </div>
+        <div className="my-5 text-slate-400">Featured projects</div>
         <ProjectsList
           projects={allProjectsData.filter(({ featured }) => featured)}
         />
-        <div className="flex justify-center mt-7 mb-7">
-          <Link
-            href={`/projects`}
-            className="px-5 py-2 text-sm text-blue-600 rounded-full dark:text-blue-500 bg-brand-secondary/20 "
-          >
-            View all projects ({allProjectsData.length})
-          </Link>
-        </div>
+        <div className="my-5 text-slate-400">Other projects</div>
+        <ProjectsList
+          projects={allProjectsData.filter(({ featured }) => !featured)}
+        />
       </div>
     </Layout>
   );
