@@ -5,9 +5,10 @@ end: "2018-05-31"
 image: "/img/projects/2017/OutingTravelWebsite2016-2018/outing-travel-index.png"
 technologies:
   - Ember.js
-  - React
+  - jQuery
   - Bootstrap
-  - Python
+  - Node.js
+  - NativeScript
 images:
   - "/img/projects/2017/OutingTravelWebsite2016-2018/outing-travel-index.png"
   - "/img/projects/2017/OutingTravelWebsite2016-2018/outing-travel-home.png"
@@ -48,7 +49,7 @@ Main technical challenge was to deal with The Great Firewall of China. Initially
 
 RethinkDB was used as a database. Node.js and Express.js was used on backend. Passport.js was used for authentication.
 
-Mobile app was a **NativeScript** ax`pp. It was based on **Angular** and **TypeScript**. Mobile app contained bacis functionality of the website:
+Mobile app was a **NativeScript** app. Mobile app contained bacis functionality of the website:
 
 - list of itineraries (trips)
 - itinerary details page
