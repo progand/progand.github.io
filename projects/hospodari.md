@@ -1,67 +1,55 @@
 ---
-title: "OutingTravel - trustworthy community for like-minded adventurers"
-start: "2017-01-01"
-end: "2018-05-31"
-image: "/img/projects/2017/OutingTravelWebsite2016-2018/outing-travel-index.png"
+title: "Hospodari - startup for houses, flats and condominiums"
+start: "2020-12-15"
+end: "2021-12-15"
+image: "/img/projects/2021/Hospodari2021/home.png"
+url: "https://www.hospodari.com/"
 technologies:
   - Ember.js
   - React
   - Bootstrap
   - Python
 images:
-  - "/img/projects/2017/OutingTravelWebsite2016-2018/outing-travel-index.png"
-  - "/img/projects/2017/OutingTravelWebsite2016-2018/outing-travel-home.png"
-  - "/img/projects/2017/OutingTravelWebsite2016-2018/outing-travel-itinerary.png"
-  - "/img/projects/2017/OutingTravelWebsite2016-2018/outing-travel-itinerary-edit.png"
-  - "/img/projects/2017/OutingTravelWebsite2016-2018/outing-travel-group-message.png"
-  - "/img/projects/2017/OutingTravelWebsite2016-2018/outing-travel-message-center.png"
-  - "/img/projects/2017/OutingTravelWebsite2016-2018/outing-travel-profile.png"
-  - "/img/projects/2017/OutingTravelWebsite2016-2018/outing-travel-app-itinerary.png"
-  - "/img/projects/2017/OutingTravelWebsite2016-2018/outing-travel-app-profile.png"
-  - "/img/projects/2017/OutingTravelWebsite2016-2018/outing-travel-create-step1.png"
-  - "/img/projects/2017/OutingTravelWebsite2016-2018/outing-travel-create-step2.png"
-  - "/img/projects/2017/OutingTravelWebsite2016-2018/outing-travel-create-step3.png"
-  - "/img/projects/2017/OutingTravelWebsite2016-2018/outing-travel-create-done.png"
-featured: true
+  - "/img/projects/2021/Hospodari2021/home.png"
+  - "/img/projects/2021/Hospodari2021/order-form1.png"
+  - "/img/projects/2021/Hospodari2021/order-form2.png"
+  - "/img/projects/2021/Hospodari2021/jobs_feed.png"
+  - "/img/projects/2021/Hospodari2021/business-form.png"
+  - "/img/projects/2021/Hospodari2021/business-profile.png"
+  - "/img/projects/2021/Hospodari2021/upload-image.png"
+  - "/img/projects/2021/Hospodari2021/analytics.png"
+video: 'https://youtu.be/DzLwIgSRDUg'
 ---
+
+[Demo Video](https://youtu.be/DzLwIgSRDUg)
 
 ## My Role
 
-I was lead full-stack developer on the project. I was responsible for web app and mobile app development.
+I was lead frontend-developer on the project. I was responsible for website and admin panel development.
 
-Website was a _Singe Page Application_ (SPA). It was based on **Ember.js** and **jQuery**. SPA contains:
+Website was a _Singe Page Application_ (SPA). It was based on **Ember.js**. SPA contains:
 
-- homepage with search and filters
-- itinerary page with trip details
-- message center with group and private messages
-- multi-step create itinerary page wizard
-- user profile
+- homepage
+- profiles for 2 types of customers (workers and owners)
+- list of orders, properties, businesses
+- complex catalog of services
+- lots of other minor pages
 
-I've added a number of features to the website:
+Also we added simple static pages for SEO purposes. I made React **React** for these static pages to enhance it's functinality.
 
-- internationalization
-- performance improvements
-- business logic features
-- usability and animations
+Some of tasks I made:
 
-Main technical challenge was to deal with The Great Firewall of China. Initially we used AWS S3 for images. But upload/download speed was very slow. So we decided to use a China-based file storage.
-
-RethinkDB was used as a database. Node.js and Express.js was used on backend. Passport.js was used for authentication.
-
-Mobile app was a **NativeScript** ax`pp. It was based on **Angular** and **TypeScript**. Mobile app contained bacis functionality of the website:
-
-- list of itineraries (trips)
-- itinerary details page
-- user profile page
+- added forms validation
+- added subscriptions for recurring services
+- added CRUD for orders, transactions, building, and other data to admin panel
+- upgraded project codebase (website and admin web-apps)
+- added a number of analytics charts and grids to admin panel
+- developed static site for landing pages and posts with **React** widgets for SEO purposes
+- made an umber of changes in client-side business logic
+- changes layout and logic of service catalog
+- added image uploading and portfolio creation for users
+- finished a lot of layout changes and bugfixes
 
 ## About Project
 
-Founded in Februrary of 2016 based in Shenzhen, China, Outing Travel is a trustworthy community for like-minded adventurers to create, share and enjoy adventures all over the world.
-
-The idea of the project is to create a community of people who like to travel and to make it easier for them to find like-minded people to travel with. The project is a platform for people to create and share their travel plans and to find people to travel with.
-
-The project was founded by Chinesse students from Shenzen University and promary target audience is Chinese young people. The project is available in English and Chinese languages.
-
-The project has website and mobile app with basic functionality. The website is a Single Page Application (SPA) based on Ember.js. The mobile app is a NativeScript app.
-
-Unfortunately, the project was not successful and was closed in 2018.
+Project is aimed to handle all issues any building/flat/house faces including constructuions, repairments, replacements, cleaning, etc.
