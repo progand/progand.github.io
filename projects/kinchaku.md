@@ -9,9 +9,20 @@ technologies:
   - Vuetify
   - JavaScript
 images:
-  - "/img/projects/2019/Kinchaku2019/kinchaku-home.png"
-  - "/img/projects/2019/Kinchaku2019/kinchaku-login.png"
+  - "/img/projects/2019/Kinchaku2019/kinchaku-model-simulation.png"
+  - "/img/projects/2019/Kinchaku2019/kinchaku-dashboard.png"
+  - "/img/projects/2019/Kinchaku2019/kinchaku-costs.png"
+  - "/img/projects/2019/Kinchaku2019/kinchaku-contact-manager.png"
+  - "/img/projects/2019/Kinchaku2019/kinchaku-membership-dashboard.png"
+  - "/img/projects/2019/Kinchaku2019/kinchaku-choose-pass-type.png"
+  - "/img/projects/2019/Kinchaku2019/kinchaku-coupons-create.png"
+  - "/img/projects/2019/Kinchaku2019/kinchaku-loyalty-create1.png"
+  - "/img/projects/2019/Kinchaku2019/kinchaku-tickets-ticket.png"
+  - "/img/projects/2019/Kinchaku2019/kinchaku-voucher-create1.png"
+  - "/img/projects/2019/Kinchaku2019/kinchaku-billing.png"
   - "/img/projects/2019/Kinchaku2019/kinchaku-business-details.png"
+  - "/img/projects/2019/Kinchaku2019/kinchaku-login.png"
+  - "/img/projects/2019/Kinchaku2019/kinchaku-home.png"
 featured: true
 ---
 
@@ -24,6 +35,7 @@ My most complex tasks:
 - lots of charts and data grids
 - visual web-page builder
 - embeddable widget for customers web-sites
+- Google Pay and Apple Wallet integration (visual editors for passes)
 
 Complex forms were developed using Vuetify components (stepper, form and form input and built-in validations). Vuetify provides powerful components for data grids as well.
 Chart were made with Echarts.js
