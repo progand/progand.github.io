@@ -9,7 +9,13 @@ import Footer from "./footer";
 const name = "progand";
 export const siteTitle = "Frontend Developer's Portfolio";
 
-export default function Layout({ children, home }) {
+export default function Layout({
+  children,
+  home,
+}: {
+  children: React.ReactNode;
+  home?: boolean;
+}) {
   return (
     <div className="">
       <Head>

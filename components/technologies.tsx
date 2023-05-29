@@ -4,6 +4,10 @@ export default function Technologies({
   children,
   technologies,
   className = "",
+}: {
+  children?: React.ReactNode;
+  technologies?: string[];
+  className?: string;
 }) {
   const colors = [
     "text-blue-600",

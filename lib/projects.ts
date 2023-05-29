@@ -4,12 +4,23 @@ import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
 
+export interface Project {
+  id: string;
+  start: string;
+  end: string;
+  title: string;
+  image: string;
+  technologies: string[];
+  contentHtml: string;
+  hidden: boolean;
+}
+
 const projectsDirectory = path.join(process.cwd(), "projects");
 
-export function getSortedProjectsData() {
+export function getSortedProjectsData(): Project[] {
   // Get file names under /projects
-  const fileNames = fs.readdirSync(projectsDirectory);
-  const allProjects = fileNames.map((fileName) => {
+  const fileNames: string[] = fs.readdirSync(projectsDirectory);
+  const allProjects: Project[] = fileNames.map((fileName) => {
     // Remove ".md" from file name to get id
     const id = fileName.replace(/\.md$/, "");
 
@@ -24,7 +35,7 @@ export function getSortedProjectsData() {
     return {
       id,
       ...matterResult.data,
-    };
+    } as Project;
   });
   // Sort projects by date
   return allProjects.sort((a, b) => {
@@ -61,7 +72,7 @@ export function getAllProjectIds() {
   });
 }
 
-export async function getProjectData(id) {
+export async function getProjectData(id: string) {
   const fullPath = path.join(projectsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
 
@@ -79,5 +90,5 @@ export async function getProjectData(id) {
     id,
     contentHtml,
     ...matterResult.data,
-  };
+  } as Project;
 }

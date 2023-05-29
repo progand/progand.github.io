@@ -4,6 +4,10 @@ export default function Date({
   dateString,
   format = "LLLL yyyy",
   className = "",
+}: {
+  dateString: string;
+  format?: string;
+  className?: string;
 }) {
   const date = parseISO(dateString);
   return (

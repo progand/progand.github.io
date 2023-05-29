@@ -2,8 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import Date from "./date";
 import Technologies from "./technologies";
+import { Project } from "../lib/projects";
 
-export default function ProjectsList({ projects }) {
+export default function ProjectsList({ projects }: { projects: Project[] }) {
   const publicProjects = projects.filter(({ hidden }) => !hidden);
   const hiddenProjects = projects.filter(({ hidden }) => hidden);
   return (
@@ -61,7 +62,9 @@ export default function ProjectsList({ projects }) {
                 <div className="text-3xl text-slate-500 dark:text-white">
                   +{hiddenProjects.length}
                 </div>
-                <div className="text-lg text-slate-500 dark:text-gray-400">hidden projects</div>
+                <div className="text-lg text-slate-500 dark:text-gray-400">
+                  hidden projects
+                </div>
               </div>
             </div>
           </div>

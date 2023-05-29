@@ -1,6 +1,9 @@
 import { cx } from "../utils/all";
 
-export default function Container(props) {
+export default function Container(props: {
+  children: React.ReactNode;
+  className?: string;
+}) {
   return (
     <div
       className={cx(
